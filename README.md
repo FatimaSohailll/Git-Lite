@@ -1,87 +1,106 @@
 # Git-Lite
 
-GitLite is a simplified version control system built in C++, inspired by Git, that utilizes tree-based data structures to manage versioning, ensure data integrity, and reduce redundancy in data transfer. Our Git stores each tree node in a separate file to minimize memory usage. Key functionalities include repository initialization, branching, switching branches, commit history, and efficient data transfer using Merkle Trees.
+GitLite is a simplified version control system built in C++, inspired by Git, that utilizes tree-based data structures to manage versioning, ensure data integrity, and reduce redundancy in data transfer. Each tree node is stored in a separate file to minimize memory usage. Key functionalities include repository initialization, branching, switching branches, commit history, and efficient data transfer using Merkle Trees.
 
 ---
 
 ## Features
-**Core Functionalities:**
-	•	Initialize Repository (init): 
-    Set up a new repository using tree structures such as AVL, B-Tree, or Red-Black Tree.
 
-  •	Commit Changes (commit):
-    Save changes to the repository with a custom message.
+### Core Functionalities
+- **Initialize Repository (`init`)**:  
+  Set up a new repository using tree structures such as AVL, B-Tree, or Red-Black Tree.
 
-  •	Branching (branch):
-    Create and manage multiple branches for parallel development.
+- **Commit Changes (`commit`)**:  
+  Save changes to the repository with a custom message.
 
-  •	Switch Branches (checkout):
-    Navigate between branches seamlessly.
+- **Branching (`branch`)**:  
+  Create and manage multiple branches for parallel development.
 
-  •	View Commit History (log):
-    Access the history of commits for the current branch.
-    
-  •	Merge Branches (merge):
-    Merge changes from one branch into another.
+- **Switch Branches (`checkout`)**:  
+  Navigate seamlessly between branches.
 
-  •	Save and Load Repository: 
-    Save the repository state to a file and reload it later.
+- **View Commit History (`log`)**:  
+  Access the history of commits for the current branch.
 
-  • Hashing Techniques:
-    Hashing techniques such as **SHA-256** and a custom **Instructor Hash** are used.
+- **Merge Branches (`merge`)**:  
+  Merge changes from one branch into another.
 
-  • SQL Integration:
-    File updates are managed using SQL commands, enabling structured and efficient data manipulation.
+- **Save and Load Repository**:  
+  Save the repository state to a file and reload it later.
+
+### Advanced Features
+- **Hashing Techniques**:  
+  Incorporates **SHA-256** and a custom **Instructor Hash** for robust data integrity.
+
+- **SQL Integration**:  
+  Manages file updates using SQL commands for structured and efficient data manipulation.
 
 ---
 
 ## Repository Commands
-1.**Initialize Repository:**
-    init <filename>
-	•	Select a tree type (AVL, B-Tree, or Red-Black Tree).
-	•	Choose a CSV column for tree construction.
 
-2.**Commit Changes:**
-   commit "message"
+### 1. **Initialize Repository**
+```plaintext
+init <filename>
+```
+- Select a tree type: AVL, B-Tree, or Red-Black Tree.  
+- Choose a CSV column for tree construction.
 
-3.**Branch Operations:**
-	•	*Create a branch:*
-    branch <branch_name>
-    
-  •	*Switch to a branch:*
-    checkout <branch_name>
-    
-  •	*List branches:*
-    branches
+### 2. **Commit Changes**
+```plaintext
+commit "message"
+```
 
-  •	*Delete a branch:*
-    delete-branch <branch_name>
+### 3. **Branch Operations**
+- **Create a Branch**:  
+  ```plaintext
+  branch <branch_name>
+  ```
+- **Switch to a Branch**:  
+  ```plaintext
+  checkout <branch_name>
+  ```
+- **List All Branches**:  
+  ```plaintext
+  branches
+  ```
+- **Delete a Branch**:  
+  ```plaintext
+  delete-branch <branch_name>
+  ```
+- **Merge Branches**:  
+  ```plaintext
+  merge <source_branch> <target_branch>
+  ```
 
-  •	*Merge branches:*
-    merge <source_branch> <target_branch>
+### 4. **View Logs**
+```plaintext
+log
+```
 
-4.**View Logs:**
-    log
+### 5. **Save and Load Repository**
+- **Save Repository**:  
+  ```plaintext
+  save
+  ```
+- **Load Repository**:  
+  ```plaintext
+  load <file_name>
+  ```
 
-5.**Save and Load:**
-	•	*Save repository:*
-    save
-
-  •	*Load repository:*
-    load <file_name>
+---
 
 ## Prerequisites
 
 To compile and run GitLite, ensure your system meets the following requirements:
-
 - A C++ compiler supporting C++17 or later.
-- CSV dataset
+- A CSV dataset.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
