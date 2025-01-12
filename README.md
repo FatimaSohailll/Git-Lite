@@ -107,6 +107,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgments
 
 - Inspired by Git.
-- Special thanks to the contributors who helped build this project.
+- Special thanks to the contributors who helped build this project. 
 
 ---
